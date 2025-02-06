@@ -1,0 +1,17 @@
+<h1>Ближайшие бронирования</h1>
+
+<table border="1">
+  <tr>
+    <th>Дата</th>
+    <th>Время</th>
+    <th>Клиент</th>
+  </tr>
+  
+  <% @bookings.each do |booking| %>
+    <tr>
+      <td><%= booking.date.strftime("%d.%m.%Y") %></td>
+      <td><%= booking.time.strftime("%H:%M") %></td>
+      <td><%= booking.client.name %></td>
+    </tr>
+  <% end %>
+</table>
